@@ -1,0 +1,191 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#001233;
+  color:white;
+  font-family:"Times New Roman", serif;
+  scroll-behavior:smooth;
+}
+
+/* HERO */
+
+.hero{
+  background:linear-gradient(135deg,#0071c5,#003566);
+
+  color:white;
+
+  text-align:center;
+
+  padding:80px 20px;
+}
+
+.logo{
+  width:160px;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:60px;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:22px;
+}
+
+/* TIMELINE */
+
+.timeline{
+  display:flex;
+
+  gap:30px;
+
+  overflow-x:auto;
+
+  scroll-snap-type:x mandatory;
+
+  padding:60px;
+
+  background:#ececec;
+}
+
+.timeline::-webkit-scrollbar{
+  height:10px;
+}
+
+.timeline::-webkit-scrollbar-thumb{
+  background:#0071c5;
+  border-radius:10px;
+}
+
+/* CARD */
+
+.card{
+  width:280px;
+  height:360px;
+
+  flex:none;
+
+  perspective:1000px;
+
+  scroll-snap-align:center;
+}
+
+.card-inner{
+  position:relative;
+
+  width:100%;
+  height:100%;
+
+  transition:transform 0.8s;
+
+  transform-style:preserve-3d;
+}
+
+.card:hover .card-inner{
+  transform:rotateY(180deg);
+}
+
+/* FRONT + BACK */
+
+.card-front,
+.card-back{
+  position:absolute;
+
+  width:100%;
+  height:100%;
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  backface-visibility:hidden;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* FRONT */
+
+.card-front{
+  background:white;
+  color:#001233;
+}
+
+.card-front img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.card-front h2{
+  color:#00509d;
+
+  font-size:42px;
+
+  padding:18px 22px 5px;
+}
+
+.card-front h3{
+  font-size:24px;
+
+  padding:0 22px;
+}
+
+/* BACK */
+
+.card-back{
+  background:#003566;
+
+  color:white;
+
+  transform:rotateY(180deg);
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  text-align:center;
+
+  padding:25px;
+
+  line-height:1.7;
+
+  font-size:18px;
+}
+
+/* NOTE */
+
+.note{
+  text-align:center;
+
+  padding:25px;
+
+  background:#001233;
+
+  color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .hero p{
+    font-size:18px;
+  }
+
+  .timeline{
+    padding:30px;
+  }
+
+}
