@@ -37,7 +37,14 @@ body{
 .hero p{
   font-size:22px;
 }
-
+.hero p,
+.card-back p,
+.note,
+.newsletter,
+footer,
+.container {
+  direction: ltr;
+}
 /* TIMELINE */
 
 .timeline{
